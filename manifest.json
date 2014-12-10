@@ -1,0 +1,18 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "xkcd-keys",
+  "version": "1.0",
+  "icons": { "32": "favicon.png",
+              "128": "favicon128x128.png"},
+  "description": "Enables key usage for xkcd.com",
+  "author": "s22l1g11",
+  "homepage_url": "http://www.zimmerpforte.de/",
+  "background": "background.html",
+  "permissions": ["tabs", "*://*.xkcd.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.xkcd.com/*"],
+      "js": ["jquery-2.1.1.min.js", "keys.js"]
+    }]
+}
